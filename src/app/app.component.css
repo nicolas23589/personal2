@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    pad: 0;
+    box-sizing: border-box;
+}
+
+body{
+   
+    background: #0C1227;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+  
+    overflow: hidden;
+}
+
+.bubbles{
+    position: relative;
+    display: flex;
+}
+
+.bubbles span{
+    
+   position: relative;
+    width: 10px;
+    height: 180px; 
+    background: #19E70F;
+    margin:  -1;
+    border-radius: 0%;
+    box-shadow: 0 0 0 10px #19E70F, 
+    0 0 50px #00FF07, 
+    0 0 100px #00FF07;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s/var(--i));
+
+}
+
+.bubbles span:nth-child(even){
+    background: #19E70F;
+    box-shadow: 0 0 0 10px #19E70F,
+    0 0 50px #19E70F,
+    0 0 100px #19E70F;
+
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(600vh) scale(0.2);
+    }
+    100% {
+        transform: translateY(-400vh) scale(0.2);
+    }
+}
+
+.h2{
+    color: white;
+}
+.p{
+    color: white;
+}
